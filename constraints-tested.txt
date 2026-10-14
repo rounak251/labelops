@@ -1,0 +1,18 @@
+# Tested direct dependencies and numerical stack, Python 3.13 on macOS ARM64.
+# Install: python -m pip install -c constraints-tested.txt -e '.[dev]'
+# Dependency pins do not fix OS, CPU, or BLAS; see reports/report.json.
+numpy==2.3.5
+scipy==1.16.3
+scikit-learn==1.7.2
+threadpoolctl==3.5.0
+pandas==2.3.3
+joblib==1.5.2
+matplotlib==3.10.0
+streamlit==1.51.0
+fastapi==0.143.0
+starlette==1.8.0
+pydantic==2.13.4
+uvicorn==0.54.0
+pytest==8.4.2
+httpx==0.28.1
+ruff==0.12.0

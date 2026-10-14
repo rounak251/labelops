@@ -1,0 +1,10 @@
+.git
+.venv
+.labelops*
+__pycache__
+.pytest_cache
+.ruff_cache
+*.egg-info
+*.sqlite*
+*.joblib
+.env*

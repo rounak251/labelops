@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "labelops"
+version = "0.1.0"
+description = "A human-in-the-loop ML workbench for active learning and annotation quality"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{name = "rounak251"}]
+dependencies = [
+  "numpy>=1.26,<3",
+  "scikit-learn>=1.5,<2",
+  "pandas>=2.2,<3",
+  "joblib>=1.4,<2",
+  "matplotlib>=3.9,<4",
+  "streamlit>=1.51,<2",
+  "fastapi>=0.115,<1",
+  "uvicorn>=0.30,<1",
+  "pydantic>=2.9,<3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "httpx>=0.27,<1", "ruff==0.12.0"]
+
+[project.scripts]
+labelops = "labelops.cli:main"
+
+[project.urls]
+Repository = "https://github.com/rounak251/labelops"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
